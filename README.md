@@ -1,9 +1,16 @@
 # EncycloSport
-Site vitrine d'un cafe fictif — realise en HTML/Tailwind CSS.
+
+Encyclopédie numérique du sport — réalisée en HTML5 et Tailwind CSS.
 ## Pages
-- Page d'accueil
-- Liste d'articles
-- Liste d'articles
+
+- Page d'accueil (`index.html`)
+- Liste des articles (`articles.html`)
+- Détail d'un article (`article.html`)
+
 ## Technologies
+
 - HTML5
-- Taiwind CSS
+- Tailwind CSS
+- JavaScript (pour les interactions)
+
+## Structure du projet
