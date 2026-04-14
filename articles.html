@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Articles - Encyclopédie du Sport</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold text-green-700 flex items-center gap-2">
+        <span>EncycloSport</span>
+      </a>
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-green-600">Accueil</a>
+        <a href="#" class="text-green-600 font-semibold">Articles</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- Titre de la page -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl font-bold text-gray-800 mb-3">Tous les Articles</h1>
+      <p class="text-xl text-gray-600">Découvrez les grands sports du monde</p>
+    </div>
+
+    <!-- Filtres par catégorie -->
+    <div class="flex flex-wrap gap-3 justify-center mb-10" id="filters">
+      <button onclick="filterCategory('all')"
+        class="active-filter px-6 py-2 bg-green-700 text-white rounded-full text-sm font-medium">
+        Tous les sports
+      </button>
+      <button onclick="filterCategory('equipe')"
+        class="px-6 py-2 bg-white hover:bg-gray-100 border border-gray-300 rounded-full text-sm font-medium">
+        Sports d'équipe
+      </button>
+      <button onclick="filterCategory('individuel')"
+        class="px-6 py-2 bg-white hover:bg-gray-100 border border-gray-300 rounded-full text-sm font-medium">
+        Sports individuels
+      </button>
+    </div>
+
+    <!-- Grille des articles -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+
+      <!-- Football -->
+      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+        data-category="equipe">
+        <img src="images/football.png" class="w-full h-56 object-cover" alt="Football">
+        <div class="p-6">
+          <span class="text-green-600 text-xs font-semibold tracking-widest">SPORT D'ÉQUIPE</span>
+          <h3 class="text-2xl font-bold mt-2 mb-3">Le Football</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">
+            Le sport le plus populaire au monde. Découvrez son histoire, ses règles et les plus grandes
+            compétitions.
+          </p>
+          <a href="football.html" class="mt-6  text-green-700 font-semibold hover:underline flex items-center gap-2">
+            Lire l'article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Basketball -->
+      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+        data-category="equipe">
+        <img src="images/basketball.png" class="w-full h-56 object-cover" alt="Basketball">
+        <div class="p-6">
+          <span class="text-orange-600 text-xs font-semibold tracking-widest">SPORT D'ÉQUIPE</span>
+          <h3 class="text-2xl font-bold mt-2 mb-3">Le Basketball</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">
+            Sport rapide et spectaculaire inventé aux États-Unis, rendu célèbre par la NBA.
+          </p>
+          <a href="basketball" class=" flex mt-6 text-green-700 font-semibold hover:underline items-center gap-2">
+            Lire l'article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tennis -->
+      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+        data-category="individuel">
+        <img src="images/tennis.png" class="w-full h-56 object-cover" alt="Tennis">
+        <div class="p-6">
+          <span class="text-blue-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
+          <h3 class="text-2xl font-bold mt-2 mb-3">Le Tennis</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">
+            Sport de raquette élégant et exigeant, joué sur différentes surfaces.
+          </p>
+          <a href="tennis" class="mt-6 inline-block text-green-700 font-semibold hover:underline items-center gap-2">
+            Lire l'article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Boxe -->
+      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+        data-category="individuel">
+        <img src="images/boxe.png" class="w-full h-56 object-cover" alt="Boxe">
+        <div class="p-6">
+          <span class="text-red-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
+          <h3 class="text-2xl font-bold mt-2 mb-3">La Boxe</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">
+            Le noble art : un sport de combat qui allie technique, puissance et mental.
+          </p>
+          <a href="boxe" class=" flex mt-6 text-green-700 font-semibold hover:underline items-center gap-2">
+            Lire l'article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Athlétisme -->
+      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+        data-category="individuel">
+        <img src="images/athletisme.png" class="w-full h-56 object-cover" alt="Athlétisme">
+        <div class="p-6">
+          <span class="text-purple-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
+          <h3 class="text-2xl font-bold mt-2 mb-3">L'Athlétisme</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">
+            Discipline reine des Jeux Olympiques : course, saut et lancer.
+          </p>
+          <a href="athletisme" class=" flex mt-6  text-green-700 font-semibold hover:underline items-center gap-2">
+            Lire l'article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Natation -->
+      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
+        data-category="individuel">
+        <img src="images/natation.png" class="w-full h-56 object-cover" alt="Natation">
+        <div class="p-6">
+          <span class="text-cyan-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
+          <h3 class="text-2xl font-bold mt-2 mb-3">La Natation</h3>
+          <p class="text-gray-600 text-sm line-clamp-3">
+            Sport complet et l’un des plus anciens des Jeux Olympiques.
+          </p>
+          <a href="natation" class="mt-6 inline-block text-green-700 font-semibold hover:underline  items-center gap-2">
+            Lire l'article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer simple -->
+  <footer class="bg-gray-900 text-gray-400 py-10 mt-20">
+    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+      <p>Encyclopédie Numérique du Sport</p>
+      <p class="mt-1">© 2026 - Réalisé par des étudiants</p>
+    </div>
+  </footer>
+</body>
+
+</html>
