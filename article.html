@@ -4,160 +4,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liste des Articles - Encyclopédie du Sport</title>
+  <title>Football - EncycloSport</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    .hero-bg {
+      background-image: url('/images/terrain\ de\ football.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+  </style>
+
 </head>
 
-<body class="bg-gray-50 font-sans">
+<body class="bg-[#0f172a] text-white font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <a href="index.html" class="text-3xl font-bold text-green-700 flex items-center gap-2">
-        <span>EncycloSport</span>
-      </a>
-      <div class="flex gap-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-green-600">Accueil</a>
-        <a href="#" class="text-green-600 font-semibold">Articles</a>
+  <!-- Header -->
+  <header class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#020617] border-b border-gray-800">
+    <h1 class="text-green-400 font-bold text-xl">EncycloSport</h1>
+    <nav class="hidden md:flex space-x-6 text-gray-300">
+      <a href="../index.html" class="hover:text-green-400 transition">Accueil</a>
+      <a href="../liste-articles.html" class="hover:text-green-400 transition">Articles</a>
+      <a href="#" class="hover:text-green-400 transition">À propos</a>
+
+    <button class="md:hidden text-green-400" aria-label="Menu">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <header class="hero-bg h-[480px] flex items-center bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <span class="inline-block bg-green-500 text-white text-sm font-medium px-5 py-2 rounded-full mb-4">
+          Football
+        </span>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          Le Football : Le Sport le Plus Populaire au Monde
+        </h1>
+        <p class="text-xl text-white">
+          Découvrez l’histoire, les règles et l’impact culturel du sport roi.
+        </p>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <div class="max-w-7xl mx-auto px-6 py-12">
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
 
-    <!-- Titre de la page -->
-    <div class="text-center mb-12">
-      <h1 class="text-5xl font-bold text-gray-800 mb-3">Tous les Articles</h1>
-      <p class="text-xl text-gray-600">Découvrez les grands sports du monde</p>
-    </div>
+    <!-- Contenu principal -->
+    <article class="lg:col-span-8">
 
-    <!-- Filtres par catégorie -->
-    <div class="flex flex-wrap gap-3 justify-center mb-10" id="filters">
-      <button onclick="filterCategory('all')"
-        class="active-filter px-6 py-2 bg-green-700 text-white rounded-full text-sm font-medium">
-        Tous les sports
-      </button>
-      <button onclick="filterCategory('equipe')"
-        class="px-6 py-2 bg-white hover:bg-gray-100 border border-gray-300 rounded-full text-sm font-medium">
-        Sports d'équipe
-      </button>
-      <button onclick="filterCategory('individuel')"
-        class="px-6 py-2 bg-white hover:bg-gray-100 border border-gray-300 rounded-full text-sm font-medium">
-        Sports individuels
-      </button>
-    </div>
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-xl leading-relaxed text-gray-300">
+          Le football, aussi appelé soccer dans certains pays, est un sport collectif qui oppose deux équipes de 11
+          joueurs sur un terrain rectangulaire.
+          C’est le sport le plus pratiqué et le plus regardé au monde avec plus de 4 milliards de fans.
+        </p>
 
-    <!-- Grille des articles -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Histoire du Football</h2>
+        <p class="text-gray-300">
+          Les règles modernes du football ont été codifiées en 1863 en Angleterre avec la création de la Football
+          Association.
+          Le premier match international a eu lieu en 1872 entre l’Écosse et l’Angleterre.
+        </p>
 
-      <!-- Football -->
-      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
-        data-category="equipe">
-        <img src="images/football.png" class="w-full h-56 object-cover" alt="Football">
-        <div class="p-6">
-          <span class="text-green-600 text-xs font-semibold tracking-widest">SPORT D'ÉQUIPE</span>
-          <h3 class="text-2xl font-bold mt-2 mb-3">Le Football</h3>
-          <p class="text-gray-600 text-sm line-clamp-3">
-            Le sport le plus populaire au monde. Découvrez son histoire, ses règles et les plus grandes
-            compétitions.
-          </p>
-          <a href="football.html" class="mt-6  text-green-700 font-semibold hover:underline flex items-center gap-2">
-            Lire l'article <i class="fas fa-arrow-right"></i>
+        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Règles de base</h2>
+        <ul class="list-disc pl-6 space-y-3 text-gray-300 text-lg">
+          <li>Deux équipes de 11 joueurs (1 gardien de but)</li>
+          <li>Durée du match : 2 périodes de 45 minutes</li>
+          <li>Objectif : marquer plus de buts que l’adversaire</li>
+          <li>Interdiction de toucher le ballon avec les mains (sauf le gardien dans sa surface)</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-white mt-12 mb-6">Légendes du Football</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+
+          <!-- Carte Pelé -->
+          <div class="group bg-[#1e2937] p-6 rounded-2xl text-center overflow-hidden 
+              hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 
+              transition-all duration-300 ease-out">
+
+            <div class="relative mb-6">
+              <img src="/images/pele.jpeg" alt="Pelé" class="w-28 h-28 mx-auto rounded-full object-cover border-4 border-green-500 
+                  transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110">
+
+              <!-- Effet de brillance au hover -->
+              <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent 
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </div>
+
+            <h3 class="font-semibold text-xl mb-1 transition-colors group-hover:text-green-400">Pelé</h3>
+            <p class="text-green-400 text-sm">Le Roi du Football</p>
+          </div>
+
+          <!-- Carte Messi -->
+          <div class="group bg-[#1e2937] p-6 rounded-2xl text-center overflow-hidden 
+              hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 
+              transition-all duration-300 ease-out">
+
+            <div class="relative mb-6">
+              <img src="/images/messi.jpeg" alt="Messi" class="w-28 h-28 mx-auto rounded-full object-cover border-4 border-green-500 
+                  transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110">
+
+              <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent 
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </div>
+
+            <h3 class="font-semibold text-xl mb-1 transition-colors group-hover:text-green-400">Lionel Messi</h3>
+            <p class="text-green-400 text-sm">8 Ballons d’Or</p>
+          </div>
+
+          <!-- Carte Ronaldo -->
+          <div class="group bg-[#1e2937] p-6 rounded-2xl text-center overflow-hidden 
+              hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 
+              transition-all duration-300 ease-out">
+
+            <div class="relative mb-6">
+              <img src="/images/ronaldo.jpeg" alt="Ronaldo" class="w-28 h-28 mx-auto rounded-full object-cover border-4 border-green-500 
+                  transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110">
+
+              <div class="absolute inset-0 bg-gradient-to-br from-green-400/20 to-transparent 
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+            </div>
+
+            <h3 class="font-semibold text-xl mb-1 transition-colors group-hover:text-green-400">Cristiano Ronaldo</h3>
+            <p class="text-green-400 text-sm">Record de buts</p>
+          </div>
+
+        </div>
+
+        <!-- Pour aller plus loin -->
+        <div class="mt-16 bg-[#1e2937] border border-gray-700 p-8 rounded-3xl">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <i class="fas fa-external-link-alt text-green-400"></i>
+            Pour aller plus loin
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="#" class="block bg-[#0f172a] p-6 rounded-2xl hover:bg-green-900/30 transition">
+              <h4 class="font-semibold text-lg mb-2">Règles officielles FIFA</h4>
+              <p class="text-sm text-gray-400">Télécharge le document officiel des lois du jeu.</p>
+            </a>
+            <a href="#" class="block bg-[#0f172a] p-6 rounded-2xl hover:bg-green-900/30 transition">
+              <h4 class="font-semibold text-lg mb-2">Documentaire : "The Beautiful Game"</h4>
+              <p class="text-sm text-gray-400">L’histoire et l’impact culturel du football.</p>
+            </a>
+          </div>
+        </div>
+    </article>
+
+    <!-- Barre latérale -->
+    <aside class="lg:col-span-4 space-y-10">
+
+      <div>
+        <h3 class="text-xl font-bold mb-6 flex items-center gap-2 text-green-400">
+          <i class="fas fa-link"></i>
+          Articles connexes
+        </h3>
+        <div class="space-y-6">
+          <a href="natation" class="flex gap-4 group">
+            <img src="/images/natation.png" alt="Natation" class="w-20 h-20 object-cover rounded-xl">
+            <div class="flex-1">
+              <h4 class="font-medium group-hover:text-green-400">La Natation</h4>
+              <p class="text-sm text-gray-400 line-clamp-2">Sport complet et accessible à tous.</p>
+            </div>
+          </a>
+
+          <a href="boxe" class="flex gap-4 group">
+            <img src="/images/boxe.png" alt="Boxe" class="w-20 h-20 object-cover rounded-xl">
+            <div class="flex-1">
+              <h4 class="font-medium group-hover:text-green-400">La Boxe</h4>
+              <p class="text-sm text-gray-400 line-clamp-2">Le noble art du combat.</p>
+            </div>
+          </a>
+
+          <a href="basketball" class="flex gap-4 group">
+            <img src="images/basketball.png" alt="Basketball" class="w-20 h-20 object-cover rounded-xl">
+            <div class="flex-1">
+              <h4 class="font-medium group-hover:text-green-400">Le Basketball</h4>
+              <p class="text-sm text-gray-400 line-clamp-2">Sport spectaculaire et rapide.</p>
+            </div>
           </a>
         </div>
       </div>
 
-      <!-- Basketball -->
-      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
-        data-category="equipe">
-        <img src="images/basketball.png" class="w-full h-56 object-cover" alt="Basketball">
-        <div class="p-6">
-          <span class="text-orange-600 text-xs font-semibold tracking-widest">SPORT D'ÉQUIPE</span>
-          <h3 class="text-2xl font-bold mt-2 mb-3">Le Basketball</h3>
-          <p class="text-gray-600 text-sm line-clamp-3">
-            Sport rapide et spectaculaire inventé aux États-Unis, rendu célèbre par la NBA.
-          </p>
-          <a href="basketball" class=" flex mt-6 text-green-700 font-semibold hover:underline items-center gap-2">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
+      <!-- Infos rapides -->
+      <div class="bg-[#1e2937] p-7 rounded-3xl">
+        <h3 class="font-bold text-xl mb-6 text-green-400">En bref</h3>
+        <div class="space-y-5 text-sm">
+          <div class="flex justify-between border-b border-gray-700 pb-3">
+            <span class="text-gray-400">Joueurs par équipe</span>
+            <span class="font-semibold">11</span>
+          </div>
+          <div class="flex justify-between border-b border-gray-700 pb-3">
+            <span class="text-gray-400">Durée du match</span>
+            <span class="font-semibold">90 minutes</span>
+          </div>
+          <div class="flex justify-between border-b border-gray-700 pb-3">
+            <span class="text-gray-400">Créé en</span>
+            <span class="font-semibold">1863</span>
+          </div>
+          <div class="flex justify-between border-b border-gray-700 pb-3">
+            <span class="text-gray-400">Fédération</span>
+            <span class="font-semibold">FIFA</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-400">Coupe du Monde</span>
+            <span class="font-semibold">Tous les 4 ans</span>
+          </div>
         </div>
       </div>
 
-      <!-- Tennis -->
-      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
-        data-category="individuel">
-        <img src="images/tennis.png" class="w-full h-56 object-cover" alt="Tennis">
-        <div class="p-6">
-          <span class="text-blue-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
-          <h3 class="text-2xl font-bold mt-2 mb-3">Le Tennis</h3>
-          <p class="text-gray-600 text-sm line-clamp-3">
-            Sport de raquette élégant et exigeant, joué sur différentes surfaces.
-          </p>
-          <a href="tennis" class="mt-6 inline-block text-green-700 font-semibold hover:underline items-center gap-2">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Boxe -->
-      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
-        data-category="individuel">
-        <img src="images/boxe.png" class="w-full h-56 object-cover" alt="Boxe">
-        <div class="p-6">
-          <span class="text-red-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
-          <h3 class="text-2xl font-bold mt-2 mb-3">La Boxe</h3>
-          <p class="text-gray-600 text-sm line-clamp-3">
-            Le noble art : un sport de combat qui allie technique, puissance et mental.
-          </p>
-          <a href="boxe" class=" flex mt-6 text-green-700 font-semibold hover:underline items-center gap-2">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Athlétisme -->
-      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
-        data-category="individuel">
-        <img src="images/athletisme.png" class="w-full h-56 object-cover" alt="Athlétisme">
-        <div class="p-6">
-          <span class="text-purple-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
-          <h3 class="text-2xl font-bold mt-2 mb-3">L'Athlétisme</h3>
-          <p class="text-gray-600 text-sm line-clamp-3">
-            Discipline reine des Jeux Olympiques : course, saut et lancer.
-          </p>
-          <a href="athletisme" class=" flex mt-6  text-green-700 font-semibold hover:underline items-center gap-2">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Natation -->
-      <div class="article-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all"
-        data-category="individuel">
-        <img src="images/natation.png" class="w-full h-56 object-cover" alt="Natation">
-        <div class="p-6">
-          <span class="text-cyan-600 text-xs font-semibold tracking-widest">SPORT INDIVIDUEL</span>
-          <h3 class="text-2xl font-bold mt-2 mb-3">La Natation</h3>
-          <p class="text-gray-600 text-sm line-clamp-3">
-            Sport complet et l’un des plus anciens des Jeux Olympiques.
-          </p>
-          <a href="natation" class="mt-6 inline-block text-green-700 font-semibold hover:underline  items-center gap-2">
-            Lire l'article <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
+    </aside>
   </div>
 
-  <!-- Footer simple -->
-  <footer class="bg-gray-900 text-gray-400 py-10 mt-20">
-    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-      <p>Encyclopédie Numérique du Sport</p>
-      <p class="mt-1">© 2026 - Réalisé par des étudiants</p>
+  <!-- TON NOUVEAU FOOTER -->
+  <footer class="bg-[#020617] text-gray-400 mt-16 md:px-12 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div>
+          <h2 class="text-green-400 text-xl font-bold mb-3">EncycloSport</h2>
+          <p class="text-sm">Votre encyclopédie sportive pour découvrir, apprendre et explorer tous les sports du monde.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-3">Liens rapides</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="../index.html" class="hover:text-green-400 transition">Accueil</a></li>
+            <li><a href="../liste-articles.html" class="hover:text-green-400 transition">Articles</a></li>
+            <li><a href="#" class="hover:text-green-400 transition">À propos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-white font-semibold mb-3">Contact</h3>
+          <p class="text-sm mb-3">Email : contact@Encyclosport.com</p>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" aria-label="Facebook" class="hover:text-green-400 transition">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:text-green-400 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Tiktok" class="hover:text-green-400 transition">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
+        ©️ 2026 EncycloSport - Tous droits réservés
+      </div>
     </div>
   </footer>
+
 </body>
 
 </html>
