@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>EncycloSport - Articles</title>
+
+  <!-- TAILWIND (IMPORTANT) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0f172a] text-gray-400">
+
+<!--navbar-->
+  <header class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#020617]">
+    <h1 class="text-green-400 font-bold text-xl">EncycloSport</h1>
+    
+    <nav class="hidden md:flex space-x-6 text-gray-300">
+      <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
+      <a href="articles.html" class="hover:text-green-400 transition">Articles</a>
+      <a href="detail.html" class="hover:text-green-400 transition">Detail</a>
+    </nav>
+
+   <!--menu mobile-->
+    <button class="md:hidden hover:text-green-400" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+<!-- TITRE -->
+<section class="text-center py-10">
+  <h2 class="text-3xl font-bold text-green-400">Liste des Sports</h2>
+  <p class="mt-2">Découvrez différents sports à travers le monde</p>
+</section>
+
+<!-- FILTRES -->
+<div class="flex justify-center gap-4 mb-8 flex-wrap">
+  <button class="bg-green-400 text-green-200 px-4 py-2 rounded transition hover:bg-green-400 hover:text-black">Tous</button>
+  <button class="bg-green-400 text-green-200 px-4 py-2 rounded transition hover:bg-green-400 hover:text-black">Football</button>
+  <button class="bg-green-400 text-green-200 px-4 py-2 rounded transition hover:bg-green-400 hover:text-black">Basketball</button>
+  <button class="bg-green-400 text-green-200 px-4 py-2 rounded transition hover:bg-green-400 hover:text-black">Tennis</button>
+</div>
+<!-- ARTICLES (GRILLE RESPONSIVE) -->
+<section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+  <!-- CARD -->
+  <div class="bg-[#020617] rounded shadow hover:scale-105 transition overflow-hidden">
+    <img src="images/football1.jpg" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400">Football</h3>
+      <p class="mt-2">Sport collectif très populaire joué avec un ballon.</p>
+      <a href="detail.html" class="text-green-400 font-semibold mt-2 inline-block hover:underline">Lire plus →</a>
+    </div>
+  </div>
+
+  <!-- CARD -->
+  <div class=" bg-[#020617] rounded shadow hover:scale-105 transition overflow-hidden">
+    <img src="images/basketball1.jpg" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400">Basketball</h3>
+      <p class="mt-2">Sport où deux équipes marquent en lançant un ballon dans un panier.</p>
+      <a href="detail.html" class="text-green-400 font-semibold mt-2 inline-block hover:underline">Lire plus →</a>
+    </div>
+  </div>
+
+  <!-- CARD -->
+  <div class="bg-[#020617] rounded shadow hover:scale-105 transition overflow-hidden">
+    <img src="images/tennis1.jpg" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400">Tennis</h3>
+      <p class="mt-2">Sport individuel ou en double avec une raquette.</p>
+      <a href="detail.html" class="text-green-400 font-semibold mt-2 inline-block hover:underline">Lire plus →</a>
+    </div>
+  </div>
+
+  <!-- CARD -->
+  <div class="bg-[#020617] rounded shadow hover:scale-105 transition overflow-hidden">
+    <img src="images/natation1.jpg" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400">Natation</h3>
+      <p class="mt-2">Sport aquatique pratiqué en piscine ou en mer.</p>
+      <a href="detail.html" class="text-green-400 font-semibold mt-2 inline-block hover:underline">Lire plus →</a>
+    </div>
+  </div>
+
+  <!-- CARD -->
+  <div class="bg-[#020617] rounded shadow hover:scale-105 transition overflow-hidden">
+    <img src="images/athletisme1.jpg" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400">Athlétisme</h3>
+      <p class="mt-2">Regroupe plusieurs disciplines comme la course et le saut.</p>
+      <a href="detail.html" class="text-green-400 font-semibold mt-2 inline-block hover:underline">Lire plus →</a>
+    </div>
+  </div>
+
+  <!-- CARD -->
+  <div class="bg-[#020617] rounded shadow hover:scale-105 transition overflow-hidden">
+    <img src="images/boxe1.jpg" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-xl font-bold text-green-400">Boxe</h3>
+      <p class="mt-2">Sport de combat où les adversaires s'affrontent avec des gants.</p>
+      <a href="detail.html" class="text-green-400 font-semibold mt-2 inline-block hover:underline">Lire plus →</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#020617] text-gray-400 mt-16 md:px-12 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div>
+        <h2 class="text-green-400 text-xl font-bold mb-3">EncycloSport</h2>
+        <p class="text-sm">Votre encyclopédie sportive pour découvrir, apprendre et explorer tous les sports du monde.</p>
+      </div>
+
+
+      <div>
+        <h3 class="text-white font-semibold mb-3">Liens rapides</h3>
+        <ul class="space-y-2 text-sm">
+        <li><a href="index.html" class="hover:text-green-400 transition">Accueil</a></li>
+        <li><a href="articles.html" class="hover:text-green-400 transition">Articles</a></li>
+        <li><a href="detail.html" class="hover:text-green-400 transition">detail</a></li>
+        </ul>
+      </div>
+
+
+
+      <div>
+        <h3 class="text-white font-semibold mb-3">Contact</h3>
+        <p class="text-sm mb-3">Email : contact@Encyclosport.com</p>
+
+        <div class="flex space-x-4 text-lg">
+        <a href="#" aria-label="Facebook" class="hover:text-green-400 transition">
+          <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram" class="hover:text-green-400 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="Tiktok" class="hover:text-green-400 transition">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+    </div>
+
+<div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
+  ©️ 2026 EncycloSport - Tous droits réservés
+</div>
+
+  </footer>
+</body>
+</html>
