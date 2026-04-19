@@ -14,23 +14,25 @@
       background-size: cover;
       background-position: center;
     }
-
   </style>
 
 </head>
 
 <body class="bg-[#0f172a] text-white font-sans">
 
-  <!-- Header -->
-  <header class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#020617] border-b border-gray-800">
+  <!--navbar-->
+  <header class="flex justify-between items-center px-4 md:px-8 py-4 bg-[#020617]">
     <h1 class="text-green-400 font-bold text-xl">EncycloSport</h1>
+
     <nav class="hidden md:flex space-x-6 text-gray-300">
       <a href="index.html" class="hover:text-green-400 transition">Accueil</a>
       <a href="articles.html" class="hover:text-green-400 transition">Articles</a>
       <a href="detail.html" class="hover:text-green-400 transition">Detail</a>
+    </nav>
 
-    <button class="md:hidden text-green-400" aria-label="Menu">
-      <i class="fas fa-bars text-2xl"></i>
+    <!--menu mobile-->
+    <button class="md:hidden hover:text-green-400" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
     </button>
   </header>
 
@@ -264,4 +266,5 @@
   </footer>
 
 </body>
+
 </html>
