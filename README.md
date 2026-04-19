@@ -5,7 +5,7 @@ Encyclopédie numérique du sport — réalisée en HTML5 et Tailwind CSS.
 
 - Page d'accueil (`index.html`)
 - Liste des articles (`articles.html`)
-- Détail d'un article (`article.html`)
+- Détail d'un article (`detail.html`)
 
 ## Technologies
 
