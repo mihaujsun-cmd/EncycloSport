@@ -11,6 +11,5 @@ Encyclopédie numérique du sport — réalisée en HTML5 et Tailwind CSS.
 
 - HTML5
 - Tailwind CSS
-- JavaScript (pour les interactions)
 
 ## Structure du projet
